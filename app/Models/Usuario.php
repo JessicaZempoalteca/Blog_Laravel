@@ -13,6 +13,8 @@ class Usuario extends Authenticatable
         'nombre_usuario',
         'email',
         'password',
+        'rol',
         'estatus',
+        'url_imagen'
     ];
 }

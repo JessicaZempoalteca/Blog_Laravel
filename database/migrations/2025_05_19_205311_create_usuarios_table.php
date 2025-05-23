@@ -21,7 +21,14 @@ class CreateUsuariosTable extends Migration
             $table->string('nombre_usuario', 30)->unique();
             $table->string('email', 60)->unique();
             $table->string('password', 80)->nullable();
+            $table->tinyInteger('rol')->default('3');
+                /** Roles:
+                        1 - Admin
+                        2 - Autor
+                        3 - Suscriptor/Lector
+                **/
             $table->tinyInteger('estatus')->default('1');
+            $table->string('url_imagen')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
